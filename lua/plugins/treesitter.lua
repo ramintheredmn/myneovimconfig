@@ -7,10 +7,34 @@ return {
 
       config.setup({
         auto_install = true,
-        ensure_installed = {"lua", "javascript", "java", "python", "rust", "html", "vim", "vimdoc"},
+        ensure_installed = {
+          "lua",
+          "javascript",
+          "typescript",
+          "tsx",
+          "java",
+          "python",
+          "rust",
+          "html",
+          "vim",
+          "vimdoc",
+        },
         highlight = { enable = true },
         indent = { enable = true },
       })
-    end
-  }
+    end,
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+      "html",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
 }
