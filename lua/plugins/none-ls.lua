@@ -12,7 +12,6 @@ return {
 				null_ls.builtins.diagnostics.eslint_d,
 				null_ls.builtins.diagnostics.codespell,
 				null_ls.builtins.diagnostics.ruff,
-				null_ls.builtins.diagnostics.mypy,
 				null_ls.builtins.completion.spell,
 			},
 		})
