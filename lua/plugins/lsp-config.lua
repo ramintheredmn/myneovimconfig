@@ -17,10 +17,6 @@ return {
           "pyright",
           "html",
           "tailwindcss",
-          "stylua",
-          "ruff",
-          "prettier",
-          "black"
         },
       })
     end,
