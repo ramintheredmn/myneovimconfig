@@ -14,6 +14,9 @@ return {
           null_ls.builtins.diagnostics.eslint_d,
           null_ls.builtins.diagnostics.codespell,
           null_ls.builtins.diagnostics.ruff,
+          null_ls.builtins.diagnostics.curlylint,
+          null_ls.builtins.formatting.djlint,
+
         },
       })
       vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, {})

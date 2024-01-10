@@ -7,6 +7,7 @@ return {
 
       config.setup({
         auto_install = true,
+        autotag = {enable = true},
         ensure_installed = {
           "lua",
           "javascript",
@@ -32,6 +33,9 @@ return {
       "javascriptreact",
       "typescriptreact",
       "html",
+      "htmldjango",
+      "jinja",
+      "jinja.html"
     },
     config = function()
       require("nvim-ts-autotag").setup()
