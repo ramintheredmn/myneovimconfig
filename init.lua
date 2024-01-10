@@ -4,6 +4,14 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.filetype.add({
+  extension = {
+    html = "html",
+  },
+  pattern = {
+    ["*.html"] = "html",
+  },
+})
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set('n', '<C-esc>', ':q<CR>', {})
