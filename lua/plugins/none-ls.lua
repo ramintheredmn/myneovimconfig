@@ -17,6 +17,8 @@ return {
           null_ls.builtins.diagnostics.curlylint,
           null_ls.builtins.formatting.djlint,
 
+          null_ls.builtins.formatting.fourmolu
+
         },
       })
       vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, {})
