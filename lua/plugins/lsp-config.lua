@@ -19,7 +19,6 @@ return {
           "html",
           "tailwindcss",
           "htmx",
-          "haskell-language-server"
         },
       })
     end,
