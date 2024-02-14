@@ -24,6 +24,9 @@ return {
     end,
   },
   {
+    "aca/emmet-ls",
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
@@ -45,6 +48,31 @@ return {
       })
       lspconfig.pyright.setup({
         capabilities = capabilities,
+      })
+      capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+      lspconfig.emmet_ls.setup({
+        -- on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = {
+          "css",
+          "html",
+          "javascript",
+          "javascriptreact",
+          "less",
+          "sass",
+          "scss",
+          "svelte",
+          "typescriptreact",
+        },
+        init_options = {
+          html = {
+            options = {
+              -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+              ["bem.enabled"] = true,
+            },
+          },
+        },
       })
       lspconfig.htmx.setup({
         capabilities = capabilities,
